@@ -1,6 +1,7 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useSignal } from '@builder.io/qwik';
 
 export default component$(() => {
+  const SideBarOpen = useSignal(false);
   return (
     <>
       <header class="fixed backdrop-blur-lg w-full items-center left-0 right-0 top-0 flex flex-wrap bg-transparent leading-10 py-3 px-4 lg:px-10 justify-between z-[99999]">
@@ -12,9 +13,11 @@ export default component$(() => {
           <span class="text-blue-700/50 ml-0">NO</span>
         </a>
         {/* :class="SideBarOpen ? '' : 'hidden'" */}
-        <ul class="max-sm:fixed top-0 max-sm:w-3/4 max-sm:h-screen max-sm:pt-0 max-sm:bg-white right-0 lg:flex items-center justify-between lg:space-x-10 text-lg">
+        <ul
+          class={` ${SideBarOpen.value ? '' : 'hidden'} max-sm:fixed top-0 max-sm:w-3/4 max-sm:h-screen max-sm:pt-0 max-sm:bg-white right-0 lg:flex items-center justify-between lg:space-x-10 text-lg`}
+        >
           <li class="flex lg:hidden justify-end px-4 py-2.5 text-pink-400">
-            <span x-on:click="SideBarOpen = !SideBarOpen">
+            <span onClick$={() => (SideBarOpen.value = !SideBarOpen.value)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -47,8 +50,11 @@ export default component$(() => {
             <a href="https://boratechlife.hashnode.dev/">Blog</a>
           </li>
         </ul>
-        {/* x-on:click="SideBarOpen = !SideBarOpen" */}
-        <div class="text-pink-400 fill-pink-500">
+
+        <div
+          class="text-pink-400 fill-pink-500 lg:hidden"
+          onClick$={() => (SideBarOpen.value = !SideBarOpen.value)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -62,6 +68,12 @@ export default component$(() => {
             />
           </svg>
         </div>
+
+        <a href="https://www.fiverr.com/boratechlife" class="hidden lg:block">
+          <button class="bg-orange-600 text-white px-10 rounded-xl py-3 text-lg">
+            Hire me!
+          </button>
+        </a>
       </header>
     </>
   );
