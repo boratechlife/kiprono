@@ -35,12 +35,6 @@ export default component$(() => {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <link rel="stylesheet" href="./output.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
-          rel="stylesheet"
-        />
 
         <link
           href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
