@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    rgb(228, 235, 228),
+    rgb(236, 236, 237),
+    rgb(211, 160, 248),
+    rgb(216, 161, 216)
+  );
+  z-index: -1;
+  border-radius: 22px; /* Adjusted for the border width */
+}
+
+.gradient-border {
+  position: relative;
+  background-color: white;
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    rgb(241, 241, 237),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    transparent,
+    transparent
+  );
+  z-index: -1;
+  border-radius: 22px; /* Adjusted for the border width */
+}
+.gradient-border {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 10px rgba(255, 0, 0, 1),
+    0 0 0 8px rgba(255, 165, 0, 1),
+    0 0 0 12px rgba(255, 255, 0, 1); /* Red, Orange, Yellow */
+}
+
+.effect {
+  border-radius: 25px;
+  background: linear-gradient(145deg, #fee, #ffe);
+  box-shadow:
+    1px 6px 28px #eee8e8,
+    -2px -2px 8px #d9d8d8;
+}
+.text-effect {
+  text-shadow:
+    1px 1px 2px #e0e4e7,
+    0 0 0 black,
+    1px 4px 6px #def;
+}
+.inset-shadow {
+  box-shadow:
+    inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+}
+
+@tailwind utilities;

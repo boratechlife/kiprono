@@ -1,0 +1,73 @@
+import { component$ } from '@builder.io/qwik';
+import {
+  QwikCityProvider,
+  RouterOutlet,
+  ServiceWorkerRegister,
+} from '@builder.io/qwik-city';
+import { RouterHead } from './components/router-head/router-head';
+
+import './global.css';
+
+export default component$(() => {
+  /**
+   * The root of a QwikCity site always start with the <QwikCityProvider> component,
+   * immediately followed by the document's <head> and <body>.
+   *
+   * Don't remove the `<head>` and `<body>` elements.
+   */
+
+  return (
+    <QwikCityProvider>
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="KIPRONO DENIS " />
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <meta
+          name="description"
+          content="A  web designer|developer and ecommerce consultant based in kenya.Proficient in CSS, HTML, REACT, VUE, ASTRO, ANTUI Tailwind css, etc "
+        />
+        <meta
+          name="keywords"
+          content="react, css, html, freelancer, web developer, web designer,"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <link rel="stylesheet" href="./output.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+          rel="stylesheet"
+        />
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+
+        <link
+          href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+          rel="stylesheet"
+        />
+
+        <meta charSet="utf-8" />
+        <link rel="manifest" href="/manifest.json" />
+        <RouterHead />
+        <ServiceWorkerRegister />
+      </head>
+      <body
+        lang="en"
+        class="overflow-x-hidden bg-[#f9f6f0] text-sm lg:text-base antialiased dark:bg-gray-800"
+        x-data="{ SideBarOpen: false }"
+      >
+        <RouterOutlet />
+      </body>
+    </QwikCityProvider>
+  );
+});
