@@ -48,7 +48,7 @@ export default component$(() => {
       </head>
       <body
         lang="en"
-        class="overflow-x-hidden bg-[#f9f6f0] text-sm lg:text-base antialiased dark:bg-gray-800"
+        class="overflow-x-hidden bg-[#f9f6f0] text-sm lg:text-base antialiased"
         x-data="{ SideBarOpen: false }"
       >
         <RouterOutlet />

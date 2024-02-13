@@ -15,9 +15,12 @@ export default component$(() => {
           Allow us to make your site spectacular and pretty fase
         </p>
 
-        <button class="w-full lg:w-2/5 py-4 px-5 text-center bg-purple-800 text-lg text-white rounded border">
+        <a
+          href="https://www.fiverr.com/boratechlife?up_rollout=true"
+          class="w-full lg:w-2/5 py-4 px-5 text-center bg-purple-800 text-lg text-white rounded border"
+        >
           Go to my office!
-        </button>
+        </a>
       </div>
 
       <div class="w-full border-t border-white/20 mx-auto flex justify-center items-center text-sm text-gray-200 py-4">
