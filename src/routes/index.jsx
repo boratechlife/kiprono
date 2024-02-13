@@ -95,31 +95,43 @@ export default component$(() => {
       </section>
 
       <section
-        class="lg:h-[600px] py-4 lg:py-20 mb-20 w-full relative bg-gradient bg-gradient-to-b from-transparent via-slate-200/10 rounded-xl to-transparent"
+        class="relative py-4 lg:py-20 mb-20 w-full overflow-hidden"
         id="about"
       >
-        <div class="absolute h-56 hidden lg:block lg:h-96 w-56 lg:w-96 max-sm:-bottom-1/2 lg:top-1/2 lg:-translate-y-1/2 bg-orange-500 backdrop-blur-md blur-[80px] rounded-full left-1/2 -translate-x-1/2"></div>
-        <div class="bg-transparent flex justify-center items-center mx-auto absolute z-20 w-full">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-200/10 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[url('/images/particles.gif')] animate-pulse lg:animate-none bg-cover bg-center"></div>
+
+        <div class="relative z-10 flex justify-center items-center w-full">
           <div class="container mx-auto flex items-center justify-center">
-            <div class="w-full lg:w-3/4 p-6 lg:p-10 mx-auto lg:h-[500px] border-[1px] flex rounded shadow-xl mt-10 bg-white/40 backdrop-blur-[20px]">
-              <div class="w-full lg:w-3/4 text-center mx-auto">
-                <h4 class="text-3xl lg:text-6xl mb-10 text-pink-500 font-bold">
-                  About me
+            <div class="w-full lg:w-3/4 p-6 lg:p-10 mx-auto lg:h-[500px] border-[1px] flex flex-col justify-center rounded shadow-xl mt-10 bg-white/70 backdrop-blur-lg">
+              <div class="text-center">
+                <h4 class="text-3xl lg:text-6xl mb-4 text-pink-500 font-extrabold tracking-tight transition-all hover:text-pink-600">
+                  About Me
                 </h4>
 
-                <p class="text-gray-500 text-lg lg:text-2xl">
-                  I am Denis, a REMOTE FRONTEND EXPERT. Experienced in Vue,
-                  Angular, React, Svelte and Solidjs. Additionally, I have 4+
-                  years of experience in various web technologies including
-                  Nodejs, Nextjs, Nestjs, Sveltejs, Angular, JavaScript, HTML,
-                  Tailwind CSS, Vue Js, and ReactJS among others. I have work on
-                  a couple of projects and I am now a Freelance Web Developer.
+                <p class="text-gray-600 text-lg lg:text-2xl mb-6">
+                  Passionate Frontend Developer with expertise in modern
+                  frameworks.
                 </p>
+
+                <p class="text-gray-500 text-lg lg:text-xl">
+                  I am Denis, a remote frontend expert with over 4 years of
+                  experience in Vue, Angular, React, and more. I specialize in
+                  creating dynamic, user-friendly websites and applications.
+                </p>
+
+                <a
+                  href="#contact"
+                  class="mt-6 inline-block bg-pink-500 text-white font-semibold py-2 px-4 rounded hover:bg-pink-600 transition-colors"
+                >
+                  Let's Connect
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <div class="lg:py-20 max-sm:mt-40" id="services">
         <div class="container mx-auto w-full lg:w-3/4">
           <h2 class="text-4xl lg:text-5xl text-pink-500 w-full text-center py-10 font-bold mb-10">
